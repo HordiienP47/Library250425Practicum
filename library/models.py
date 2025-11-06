@@ -1,8 +1,6 @@
-# ich1
-# ich1250425
-
 from django.db import models
 from django.core.validators import MinValueValidator, MaxValueValidator
+from django.db import models
 
 
 class Author(models.Model):
@@ -19,13 +17,3 @@ class Author(models.Model):
 
     def __str__(self):
         return f"{self.last_name[0]}.{self.first_name}"
-
-"""
-Обновите уже существующую модель Author дополнительными полями:
-Профиль: ссылка на личную страницу автора, может быть не указана
-Удалён: поле, которое позволит смотреть удалён ли этот автор из базы всех авторов. 
-По умолчанию все авторы активны
-Рейтинг: позволит отсматривать рейтинг популярности авторов, от 1 до 10
-"""
-
-
